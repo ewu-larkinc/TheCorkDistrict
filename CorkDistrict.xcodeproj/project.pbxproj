@@ -14,6 +14,12 @@
 		2261D2F11A8315B60050D7E2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2261D2F01A8315B60050D7E2 /* Images.xcassets */; };
 		2261D2F41A8315B60050D7E2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2261D2F21A8315B60050D7E2 /* LaunchScreen.xib */; };
 		2261D3001A8315B60050D7E2 /* CorkDistrictTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2261D2FF1A8315B60050D7E2 /* CorkDistrictTests.swift */; };
+		2261D30A1A832F100050D7E2 /* WineToursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2261D3091A832F100050D7E2 /* WineToursViewController.swift */; };
+		2261D30C1A832F750050D7E2 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2261D30B1A832F750050D7E2 /* MapViewController.swift */; };
+		2261D30E1A832F8A0050D7E2 /* WineriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2261D30D1A832F8A0050D7E2 /* WineriesViewController.swift */; };
+		2261D3121A832FB20050D7E2 /* RestaurantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2261D3111A832FB20050D7E2 /* RestaurantsViewController.swift */; };
+		2261D3141A832FC80050D7E2 /* AccomodationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2261D3131A832FC80050D7E2 /* AccomodationsViewController.swift */; };
+		2261D3161A832FDC0050D7E2 /* PackagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2261D3151A832FDC0050D7E2 /* PackagesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +44,12 @@
 		2261D2F91A8315B60050D7E2 /* CorkDistrictTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CorkDistrictTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2261D2FE1A8315B60050D7E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2261D2FF1A8315B60050D7E2 /* CorkDistrictTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorkDistrictTests.swift; sourceTree = "<group>"; };
+		2261D3091A832F100050D7E2 /* WineToursViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WineToursViewController.swift; sourceTree = "<group>"; };
+		2261D30B1A832F750050D7E2 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		2261D30D1A832F8A0050D7E2 /* WineriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WineriesViewController.swift; sourceTree = "<group>"; };
+		2261D3111A832FB20050D7E2 /* RestaurantsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantsViewController.swift; sourceTree = "<group>"; };
+		2261D3131A832FC80050D7E2 /* AccomodationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccomodationsViewController.swift; sourceTree = "<group>"; };
+		2261D3151A832FDC0050D7E2 /* PackagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PackagesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +98,12 @@
 				2261D2F21A8315B60050D7E2 /* LaunchScreen.xib */,
 				2261D2E81A8315B60050D7E2 /* CorkDistrict.xcdatamodeld */,
 				2261D2E41A8315B60050D7E2 /* Supporting Files */,
+				2261D3091A832F100050D7E2 /* WineToursViewController.swift */,
+				2261D30B1A832F750050D7E2 /* MapViewController.swift */,
+				2261D30D1A832F8A0050D7E2 /* WineriesViewController.swift */,
+				2261D3111A832FB20050D7E2 /* RestaurantsViewController.swift */,
+				2261D3131A832FC80050D7E2 /* AccomodationsViewController.swift */,
+				2261D3151A832FDC0050D7E2 /* PackagesViewController.swift */,
 			);
 			path = CorkDistrict;
 			sourceTree = "<group>";
@@ -215,9 +233,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2261D3121A832FB20050D7E2 /* RestaurantsViewController.swift in Sources */,
+				2261D3161A832FDC0050D7E2 /* PackagesViewController.swift in Sources */,
+				2261D30E1A832F8A0050D7E2 /* WineriesViewController.swift in Sources */,
 				2261D2EC1A8315B60050D7E2 /* ViewController.swift in Sources */,
 				2261D2EA1A8315B60050D7E2 /* CorkDistrict.xcdatamodeld in Sources */,
 				2261D2E71A8315B60050D7E2 /* AppDelegate.swift in Sources */,
+				2261D3141A832FC80050D7E2 /* AccomodationsViewController.swift in Sources */,
+				2261D30C1A832F750050D7E2 /* MapViewController.swift in Sources */,
+				2261D30A1A832F100050D7E2 /* WineToursViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
