@@ -26,5 +26,7 @@ class PackagesViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // my own code
+    let text : UILabel!
     
 }
