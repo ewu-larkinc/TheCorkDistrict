@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5UI-gu-Dnq">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -14,59 +15,97 @@
                         <viewControllerLayoutGuide type="bottom" id="v1x-e4-KaP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ihZ-MV-rBX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EjK-Ls-rK8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2926.5" y="-70.5"/>
+            <point key="canvasLocation" x="2926" y="135"/>
         </scene>
         <!--Wineries-->
         <scene sceneID="DXy-ef-RSP">
             <objects>
-                <viewController title="Wineries" id="SfZ-l6-YqH" customClass="WineriesViewController" customModule="CorkDistrict" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Wineries" modalTransitionStyle="partialCurl" id="SfZ-l6-YqH" customClass="WineriesViewController" customModule="CorkDistrict" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3t5-yn-v8C"/>
                         <viewControllerLayoutGuide type="bottom" id="vIc-MF-Iqu"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="yWM-H0-43w">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="86" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ftB-06-nU1">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="103" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ftB-06-nU1">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="basicCell" textLabel="F8S-xA-Onc" detailTextLabel="KlB-Fo-GtN" rowHeight="86" style="IBUITableViewCellStyleValue1" id="Ubc-T7-jPQ">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="BasicCell" rowHeight="82" id="yqq-U9-meb" customClass="BasicCell" customModule="CorkDistrict" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ubc-T7-jPQ" id="G3A-ZJ-VsL">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yqq-U9-meb" id="X0i-AK-I0s">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="F8S-xA-Onc">
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3ZL-nu-rIp">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="26"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="heightClass=regular-widthClass=compact">
-                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    </variation>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KlB-Fo-GtN">
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lhF-QB-8If">
+                                                    <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="18"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
-                                                    <variation key="heightClass=regular-widthClass=compact">
-                                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                    </variation>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="lhF-QB-8If" secondAttribute="bottom" constant="8.5" id="OWG-8m-TBs"/>
+                                                <constraint firstItem="3ZL-nu-rIp" firstAttribute="leading" secondItem="X0i-AK-I0s" secondAttribute="leading" constant="12" id="Tpq-d7-A4r"/>
+                                                <constraint firstItem="3ZL-nu-rIp" firstAttribute="top" secondItem="X0i-AK-I0s" secondAttribute="top" constant="25" id="UR2-BS-RiH"/>
+                                                <constraint firstItem="lhF-QB-8If" firstAttribute="top" secondItem="3ZL-nu-rIp" secondAttribute="bottom" constant="4" id="WW4-a4-3Fq"/>
+                                                <constraint firstAttribute="trailing" secondItem="lhF-QB-8If" secondAttribute="trailing" constant="5" id="YJe-hH-kPl"/>
+                                                <constraint firstItem="lhF-QB-8If" firstAttribute="leading" secondItem="X0i-AK-I0s" secondAttribute="leading" constant="12" id="mJY-uy-ENR"/>
+                                                <constraint firstAttribute="trailing" secondItem="3ZL-nu-rIp" secondAttribute="trailing" constant="5" id="yFq-c9-BqE"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="3ZL-nu-rIp"/>
+                                                    <exclude reference="lhF-QB-8If"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <exclude reference="Tpq-d7-A4r"/>
+                                                    <exclude reference="UR2-BS-RiH"/>
+                                                    <exclude reference="yFq-c9-BqE"/>
+                                                    <exclude reference="OWG-8m-TBs"/>
+                                                    <exclude reference="WW4-a4-3Fq"/>
+                                                    <exclude reference="YJe-hH-kPl"/>
+                                                    <exclude reference="mJY-uy-ENR"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="subviews">
+                                                    <include reference="3ZL-nu-rIp"/>
+                                                    <include reference="lhF-QB-8If"/>
+                                                </mask>
+                                                <mask key="constraints">
+                                                    <include reference="Tpq-d7-A4r"/>
+                                                    <include reference="UR2-BS-RiH"/>
+                                                    <include reference="yFq-c9-BqE"/>
+                                                    <include reference="OWG-8m-TBs"/>
+                                                    <include reference="WW4-a4-3Fq"/>
+                                                    <include reference="YJe-hH-kPl"/>
+                                                    <include reference="mJY-uy-ENR"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="addressLabel" destination="lhF-QB-8If" id="OHa-Gb-dk7"/>
+                                            <outlet property="titleLabel" destination="3ZL-nu-rIp" id="nve-yl-Esm"/>
+                                            <segue destination="Sjx-3I-6ZT" kind="show" identifier="detailSegue" id="Ysb-z2-Hox"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="64" width="400" height="736"/>
-                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="SfZ-l6-YqH" id="3ZL-os-vOA"/>
                                     <outlet property="delegate" destination="SfZ-l6-YqH" id="g1M-iZ-DvG"/>
@@ -74,14 +113,32 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ftB-06-nU1" secondAttribute="trailing" id="TH4-hN-ssZ"/>
+                            <constraint firstItem="ftB-06-nU1" firstAttribute="top" secondItem="3t5-yn-v8C" secondAttribute="bottom" id="omb-K0-gjR"/>
+                            <constraint firstItem="ftB-06-nU1" firstAttribute="leading" secondItem="yWM-H0-43w" secondAttribute="leading" id="rdi-7u-RDc"/>
+                            <constraint firstItem="vIc-MF-Iqu" firstAttribute="top" secondItem="ftB-06-nU1" secondAttribute="bottom" id="vp0-t3-0yk"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="ftB-06-nU1"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="TH4-hN-ssZ"/>
+                                <exclude reference="omb-K0-gjR"/>
+                                <exclude reference="rdi-7u-RDc"/>
+                                <exclude reference="vp0-t3-0yk"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="ftB-06-nU1"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="TH4-hN-ssZ"/>
+                                <include reference="omb-K0-gjR"/>
+                                <include reference="rdi-7u-RDc"/>
+                                <include reference="vp0-t3-0yk"/>
                             </mask>
                         </variation>
                     </view>
@@ -91,7 +148,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z6e-oE-CxN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2926.5" y="577.5"/>
+            <point key="canvasLocation" x="3063" y="1128"/>
         </scene>
         <!--Packages-->
         <scene sceneID="V5H-Ka-xxg">
@@ -102,13 +159,14 @@
                         <viewControllerLayoutGuide type="bottom" id="Uwy-1A-0Y1"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="lNX-LI-FUK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qez-uO-ixu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="853.5" y="1027.5"/>
+            <point key="canvasLocation" x="928.5" y="1132.5"/>
         </scene>
         <!--Accomodations-->
         <scene sceneID="6XK-T5-Aex">
@@ -119,13 +177,14 @@
                         <viewControllerLayoutGuide type="bottom" id="XRi-Uu-Vin"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="RBO-di-urq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s66-2T-rMP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1561.5" y="1027.5"/>
+            <point key="canvasLocation" x="1636.5" y="1128"/>
         </scene>
         <!--Restaurants-->
         <scene sceneID="uiy-7L-Qwy">
@@ -136,13 +195,80 @@
                         <viewControllerLayoutGuide type="bottom" id="MiO-qU-guJ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="C6e-gu-Hg7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tvi-Df-LyV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2263.5" y="1027.5"/>
+            <point key="canvasLocation" x="2338.5" y="1128"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="xgv-gK-i3l">
+            <objects>
+                <viewController id="Sjx-3I-6ZT" customClass="DetailViewController" customModule="CorkDistrict" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PVT-WA-HeD"/>
+                        <viewControllerLayoutGuide type="bottom" id="ItX-Dz-9JQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cGf-yM-c9e">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Company description goes here..." translatesAutoresizingMaskIntoConstraints="NO" id="Pe0-Mh-MdJ">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="511" id="09P-xj-SpR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="STHeitiTC-Light" family="Heiti TC" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="09P-xj-SpR"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="09P-xj-SpR"/>
+                                    </mask>
+                                </variation>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ItX-Dz-9JQ" firstAttribute="top" secondItem="Pe0-Mh-MdJ" secondAttribute="bottom" id="Uxv-xi-5z9"/>
+                            <constraint firstAttribute="trailing" secondItem="Pe0-Mh-MdJ" secondAttribute="trailing" constant="16" id="h20-cf-8Cv"/>
+                            <constraint firstItem="Pe0-Mh-MdJ" firstAttribute="leading" secondItem="cGf-yM-c9e" secondAttribute="leading" constant="16" id="ms6-3j-Cvb"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Pe0-Mh-MdJ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="h20-cf-8Cv"/>
+                                <exclude reference="ms6-3j-Cvb"/>
+                                <exclude reference="Uxv-xi-5z9"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Pe0-Mh-MdJ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="h20-cf-8Cv"/>
+                                <include reference="ms6-3j-Cvb"/>
+                                <include reference="Uxv-xi-5z9"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="Pe0-Mh-MdJ" id="Qjg-yx-Y1w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GeZ-Kk-9hT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3792" y="1305.75"/>
         </scene>
         <!--Wine Tours-->
         <scene sceneID="zQZ-K5-GSL">
@@ -153,6 +279,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Rhx-sm-xRN"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="erA-Ok-NUK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -166,6 +293,7 @@
             <objects>
                 <tableViewController title="The Cork District" id="zPQ-7U-YTK" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="ICq-Vr-7PW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
