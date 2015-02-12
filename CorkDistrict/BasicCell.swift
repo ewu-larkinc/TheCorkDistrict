@@ -12,9 +12,10 @@ import UIKit
 
 class BasicCell : UITableViewCell {
     
+    @IBOutlet var cellImage: UIImageView!
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var addressLabel: UILabel!
-    
+    @IBOutlet var phoneLabel: UILabel!
     
     
 }

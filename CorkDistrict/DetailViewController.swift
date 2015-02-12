@@ -8,16 +8,31 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class DetailViewController: UIViewController {
-    
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var phoneLabel: UILabel!
+    @IBOutlet weak var zipLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var textView: UITextView!
-    var currentItemDescription : String!
+    
+    var currentSelection : NSManagedObject!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if (currentItemDescription != nil) {
-            textView.text = currentItemDescription
+        
+        if (currentSelection != nil) {
+            textView.text = currentSelection.valueForKey("about") as? String
+            titleLabel.text = currentSelection.valueForKey("name") as? String
+            addressLabel.text = currentSelection.valueForKey("address") as? String
+            zipLabel.text = currentSelection.valueForKey("zipcode") as? String
+            phoneLabel.text = currentSelection.valueForKey("phone") as? String
+            
+            let imageData = currentSelection.valueForKey("imageData") as? NSData
+            let mainImage = UIImage(data: imageData!)
+            imageView.contentMode = UIViewContentMode.ScaleAspectFit
         }
     }
     

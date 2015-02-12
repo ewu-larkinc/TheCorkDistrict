@@ -26,11 +26,11 @@ class WineriesViewController: UIViewController, UITableViewDataSource, UITableVi
         
         
         //grab the managedObjectContext in order to work with managed objects
-        /*let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
+        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
         let managedContext = appDelegate.managedObjectContext!
         
         //now, create a new managed object model and insert it into our managedObjectContext
-        let winery1 = NSEntityDescription.insertNewObjectForEntityForName("Winery", inManagedObjectContext: managedContext) as NSManagedObject
+        /*let winery1 = NSEntityDescription.insertNewObjectForEntityForName("Winery", inManagedObjectContext: managedContext) as NSManagedObject
         let winery2 = NSEntityDescription.insertNewObjectForEntityForName("Winery", inManagedObjectContext: managedContext) as NSManagedObject
         let winery3 = NSEntityDescription.insertNewObjectForEntityForName("Winery", inManagedObjectContext: managedContext) as NSManagedObject
         let winery4 = NSEntityDescription.insertNewObjectForEntityForName("Winery", inManagedObjectContext: managedContext) as NSManagedObject
@@ -48,8 +48,16 @@ class WineriesViewController: UIViewController, UITableViewDataSource, UITableVi
         let winery16 = NSEntityDescription.insertNewObjectForEntityForName("Winery", inManagedObjectContext: managedContext) as NSManagedObject
         let winery17 = NSEntityDescription.insertNewObjectForEntityForName("Winery", inManagedObjectContext: managedContext) as NSManagedObject
         
+        let fileURL = NSBundle.mainBundle().URLForResource("latahCreek", withExtension: "png")
+        //let myImage = UIImage(contentsOfFile: "latahCreek.png")
+        
         
         //now set the objects attributes
+        
+        let myImage = UIImage(named: "latahCreek.png")
+        //let myImage = UIImageJPEGRepresentation(theImage, 1)
+        
+        winery1.setValue(UIImageJPEGRepresentation(myImage, 1), forKey: "imageData")
         winery1.setValue("Whitestone Winery", forKey: "name")
         winery1.setValue("8 N Post", forKey: "address")
         winery1.setValue("99201", forKey: "zipcode")
@@ -57,6 +65,8 @@ class WineriesViewController: UIViewController, UITableViewDataSource, UITableVi
         winery1.setValue("Whitestone Winery is proud to release estate wines exclusively showing the unique, favorable soil and weather conditions of the Whitestone Vineyard that is located on the shores of Lake Roosevelt. The winery produces limited quantities of premium handcrafted red wines. The winery is located 75 miles west of Spokane on US Hwy 2. Please call for tasting room hours.",
             forKey: "about")
         
+        
+        winery2.setValue(UIImageJPEGRepresentation(myImage, 1), forKey: "imageData")
         winery2.setValue("Barrister Winery", forKey: "name")
         winery2.setValue("1213 W Railroad Avenue", forKey: "address")
         winery2.setValue("99201", forKey: "zipcode")
@@ -64,6 +74,7 @@ class WineriesViewController: UIViewController, UITableViewDataSource, UITableVi
         winery2.setValue("One of the Northwest's emerging superstar wineries, Barrister Winery is owned by two attorney/winemakers. Specializing in reds, our wines are available at the winery, from our mailing list or in selected fine restaurants and wine shops. Please visit our website to learn more about upcoming events, tours, new releases and hours of operation.",
             forKey: "about")
         
+        winery3.setValue(UIImageJPEGRepresentation(myImage, 1), forKey: "imageData")
         winery3.setValue("Overbluff Cellars", forKey: "name")
         winery3.setValue("620 S Washington", forKey: "address")
         winery3.setValue("99204", forKey: "zipcode")
@@ -71,6 +82,7 @@ class WineriesViewController: UIViewController, UITableViewDataSource, UITableVi
         winery3.setValue("",
             forKey: "about")
         
+        winery4.setValue(UIImageJPEGRepresentation(myImage, 1), forKey: "imageData")
         winery4.setValue("Knipprath Cellars", forKey: "name")
         winery4.setValue("5634 E Commerce Avenue", forKey: "address")
         winery4.setValue("99212", forKey: "zipcode")
@@ -78,6 +90,7 @@ class WineriesViewController: UIViewController, UITableViewDataSource, UITableVi
         winery4.setValue("",
             forKey: "about")
         
+        winery5.setValue(UIImageJPEGRepresentation(myImage, 1), forKey: "imageData")
         winery5.setValue("Liberty Lake Wine Cellars", forKey: "name")
         winery5.setValue("1018 S Garry", forKey: "address")
         winery5.setValue("99019", forKey: "zipcode")
@@ -85,6 +98,7 @@ class WineriesViewController: UIViewController, UITableViewDataSource, UITableVi
         winery5.setValue("Liberty Lake Wine Cellars produces small lots of hand crafted wine for those who seek out and appreciate limited edition wines. Specializing in single vineyard wines, we feature the fruit of the Red Mountain AVA. Open: Saturdays 1-5pm.",
             forKey: "about")
         
+        winery6.setValue(UIImageJPEGRepresentation(myImage, 1), forKey: "imageData")
         winery6.setValue("Nodland Cellars", forKey: "name")
         winery6.setValue("11616 E Montgomery Dr, Ste 69", forKey: "address")
         winery6.setValue("99206", forKey: "zipcode")
@@ -92,6 +106,7 @@ class WineriesViewController: UIViewController, UITableViewDataSource, UITableVi
         winery6.setValue("",
             forKey: "about")
         
+        winery7.setValue(UIImageJPEGRepresentation(myImage, 1), forKey: "imageData")
         winery7.setValue("V du V Wines", forKey: "name")
         winery7.setValue("12 S Scott St", forKey: "address")
         winery7.setValue("99202", forKey: "zipcode")
@@ -99,6 +114,7 @@ class WineriesViewController: UIViewController, UITableViewDataSource, UITableVi
         winery7.setValue("",
             forKey: "about")
         
+        winery8.setValue(UIImageJPEGRepresentation(myImage, 1), forKey: "imageData")
         winery8.setValue("Barili Cellars", forKey: "name")
         winery8.setValue("608 W Second Ave", forKey: "address")
         winery8.setValue("99201", forKey: "zipcode")
@@ -106,6 +122,7 @@ class WineriesViewController: UIViewController, UITableViewDataSource, UITableVi
         winery8.setValue("Barili Cellars is an award-winning, boutique winery featuring small lots of hand-crafted wine. Opened in the spring of 2009, Spokane-based Barili features crisp white and rich reds from select vineyards in the Columbia Valley, served in a family-owned business atmosphere.",
             forKey: "about")
         
+        winery9.setValue(UIImageJPEGRepresentation(myImage, 1), forKey: "imageData")
         winery9.setValue("Nectar Tasting Room", forKey: "name")
         winery9.setValue("120 N Stevens", forKey: "address")
         winery9.setValue("99201", forKey: "zipcode")
@@ -113,6 +130,7 @@ class WineriesViewController: UIViewController, UITableViewDataSource, UITableVi
         winery9.setValue("Nectar Tasting Room is shared by five Washington wineries in the heart of downtown Spokane providing over 40 wines in one location. Visitors can enjoy wine from Anelare Winery, Hard Row to Hoe Vineyards, Northwest Cellars, Skylite Cellars, and Terra Blanca Winery. The 2000 square foot space is warm, modern and inviting. You’ll come in for a sip and end up staying for the whole bottle.",
             forKey: "about")
         
+        winery10.setValue(UIImageJPEGRepresentation(myImage, 1), forKey: "imageData")
         winery10.setValue("Arbor Crest Wine Cellars", forKey: "name")
         winery10.setValue("4705 N Fruit Hill Rd", forKey: "address")
         winery10.setValue("99217", forKey: "zipcode")
@@ -120,6 +138,7 @@ class WineriesViewController: UIViewController, UITableViewDataSource, UITableVi
         winery10.setValue("One of the state's oldest wineries producing award-winning Washington wines. Named one of “50 Great Producers Every Wine Lover Should Know” by Wine Spectator. The Cliff House Tasting Room, located on a National Historic Site perched atop a cliff offering spectacular views of the Spokane Valley, is open daily 12-5. Visit the website for details including the Summer Concert Series.",
             forKey: "about")
         
+        winery11.setValue(UIImageJPEGRepresentation(myImage, 1), forKey: "imageData")
         winery11.setValue("Patit Creek Cellars", forKey: "name")
         winery11.setValue("822 W Sprague Ave", forKey: "address")
         winery11.setValue("99201", forKey: "zipcode")
@@ -127,6 +146,7 @@ class WineriesViewController: UIViewController, UITableViewDataSource, UITableVi
         winery11.setValue("Located in the heart of the downtown entertainment district, our tasting room is the perfect place to kickoff or wind down your evening. Enjoy your favorite wines by the glass or share a bottle with friends. Featuring ten wines and a myriad of pairing experiences with locally-sourced, light cuisines. Live entertainment and special events monthly. Visit our website for details.",
             forKey: "about")
         
+        winery12.setValue(UIImageJPEGRepresentation(myImage, 1), forKey: "imageData")
         winery12.setValue("Emvy Cellars", forKey: "name")
         winery12.setValue("39 W Pacific Ave", forKey: "address")
         winery12.setValue("99201", forKey: "zipcode")
@@ -134,6 +154,7 @@ class WineriesViewController: UIViewController, UITableViewDataSource, UITableVi
         winery12.setValue("We leave the wine flights up to you; choose to create your own adventure or let us be your guide. Try a gourmet cheese plate to pair with one of our elegant reds or refreshing whites and visit us on First Friday to enjoy your wine while listening to the tunes of local musicians.",
             forKey: "about")
         
+        winery13.setValue(UIImageJPEGRepresentation(myImage, 1), forKey: "imageData")
         winery13.setValue("Latah Creek Wine Cellars", forKey: "name")
         winery13.setValue("13030 E Indiana", forKey: "address")
         winery13.setValue("99216", forKey: "zipcode")
@@ -141,6 +162,7 @@ class WineriesViewController: UIViewController, UITableViewDataSource, UITableVi
         winery13.setValue("Latah Creek offers guests the opportunity to visit one of the most picturesque small wineries in the area. Latah Creek's award winning wines may be sampled at your leisure while you tour the adjoining winemaking facilities. Open Mon-Sun 9am to 5pm.",
             forKey: "about")
         
+        winery14.setValue(UIImageJPEGRepresentation(myImage, 1), forKey: "imageData")
         winery14.setValue("Cougar Crest Estate Winery", forKey: "name")
         winery14.setValue("8 N Post Street", forKey: "address")
         winery14.setValue("99201", forKey: "zipcode")
@@ -148,6 +170,7 @@ class WineriesViewController: UIViewController, UITableViewDataSource, UITableVi
         winery14.setValue("Cougar Crest Estate Winery was established at the Walla Walla Airport in 2001 by Deborah and David Hansen. Owners of 50 acres of vineyard, all in the Walla Walla Appellation, the move into making wine has been a natural progression for two people with strong backgrounds in science and a love of fine wine. The first vintage was 900 cases; the 2002 vintage will be 4000 cases.",
         forKey: "about")
         
+        winery15.setValue(UIImageJPEGRepresentation(myImage, 1), forKey: "imageData")
         winery15.setValue("Townshend Cellar", forKey: "name")
         winery15.setValue("8022 E Green Bluff Rd", forKey: "address")
         winery15.setValue("99005", forKey: "zipcode")
@@ -155,6 +178,7 @@ class WineriesViewController: UIViewController, UITableViewDataSource, UITableVi
         winery15.setValue("At Townshend Cellar we are dedicated to producing quality wines from the state of Washington. Our wines derive their distinctive flavors from extensive oak aging in small French and American oak barrels and the selection of grapes from some of the finest vineyards in the Columbia Valley. We also produce a truly unique Huckleberry port-style wine made from Wild North Idaho Huckleberries.",
             forKey: "about")
         
+        winery16.setValue(UIImageJPEGRepresentation(myImage, 1), forKey: "imageData")
         winery16.setValue("Robert Karl Cellars", forKey: "name")
         winery16.setValue("115 W Pacific Avenue", forKey: "address")
         winery16.setValue("99201", forKey: "zipcode")
@@ -162,6 +186,7 @@ class WineriesViewController: UIViewController, UITableViewDataSource, UITableVi
         winery16.setValue("Nestled in an old fire station in the Historic Warehouse District, Robert Karl Cellars is a boutique winery dedicated to producing world class wines with grapes grown in Washington's new appellation, Horse Heaven Hills by physician Joseph Gunselman. Wine & Spirits recently selected Robert Karl as one of the Top 100 Wineries in the world.",
             forKey: "about")
         
+        winery17.setValue(UIImageJPEGRepresentation(myImage, 1), forKey: "imageData")
         winery17.setValue("Bridge Press Cellars", forKey: "name")
         winery17.setValue("39 W Pacific Ave", forKey: "address")
         winery17.setValue("99201", forKey: "zipcode")
@@ -192,9 +217,7 @@ class WineriesViewController: UIViewController, UITableViewDataSource, UITableVi
         wineries.append(winery14)
         wineries.append(winery15)
         wineries.append(winery16)
-        wineries.append(winery17)
-        wineries.append(winery18)
-        wineries.append(winery19)*/
+        wineries.append(winery17)*/
         
     }
     
@@ -227,8 +250,7 @@ class WineriesViewController: UIViewController, UITableViewDataSource, UITableVi
         
         if let indexPath = self.tableView.indexPathForSelectedRow() {
             let winery = wineries[indexPath.row]
-            let selectedDescription = winery.valueForKey("about") as? String
-            dvc.currentItemDescription = selectedDescription
+            dvc.currentSelection = winery
         }
         
     }
@@ -245,14 +267,20 @@ class WineriesViewController: UIViewController, UITableViewDataSource, UITableVi
     func basicCellAtIndexPath(indexPath:NSIndexPath) -> BasicCell {
         let basicCellIdentifier = "BasicCell"
         let basicCell = tableView.dequeueReusableCellWithIdentifier(basicCellIdentifier) as BasicCell
-        setTextForCell(basicCell, indexPath: indexPath)
+        setContentForCell(basicCell, indexPath: indexPath)
         return basicCell
     }
     
-    func setTextForCell(cell:BasicCell, indexPath:NSIndexPath) {
+    func setContentForCell(cell:BasicCell, indexPath:NSIndexPath) {
         let winery = wineries[indexPath.row]
         cell.titleLabel.text = winery.valueForKey("name") as? String
         cell.addressLabel.text = winery.valueForKey("address") as? String
+        cell.phoneLabel.text = winery.valueForKey("phone") as? String
+        
+        let imageData = winery.valueForKey("imageData") as? NSData
+        let myImage = UIImage(data: imageData!)
+        cell.cellImage.image = myImage
+        cell.cellImage.contentMode = UIViewContentMode.ScaleAspectFit
     }
     
 }
