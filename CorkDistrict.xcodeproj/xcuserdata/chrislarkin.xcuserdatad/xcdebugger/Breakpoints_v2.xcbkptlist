@@ -2,4 +2,50 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CorkDistrict/Singleton.swift"
+            timestampString = "445494774.230396"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CorkDistrict.Singleton.__deallocating_deinit"
+                  moduleName = "CorkDistrict"
+                  urlString = "file:///Users/chrislarkin/Documents/iPhone%20Development/CorkDistrict/CorkDistrict/Singleton.swift"
+                  timestampString = "445497303.843699"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CorkDistrict.Singleton.init (CorkDistrict.Singleton.Type)() -&gt; CorkDistrict.Singleton"
+                  moduleName = "CorkDistrict"
+                  urlString = "file:///Users/chrislarkin/Documents/iPhone%20Development/CorkDistrict/CorkDistrict/Singleton.swift"
+                  timestampString = "445497303.8443"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "12">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

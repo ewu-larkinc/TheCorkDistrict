@@ -15,6 +15,8 @@ class BasicCell : UITableViewCell {
     @IBOutlet var cellImage: UIImageView!
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var addressLabel: UILabel!
+    @IBOutlet var cityLabel: UILabel!
+    @IBOutlet var stateLabel: UILabel!
     @IBOutlet var phoneLabel: UILabel!
     
     

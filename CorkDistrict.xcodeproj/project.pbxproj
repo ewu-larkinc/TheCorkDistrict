@@ -19,6 +19,7 @@
 		2261D3121A832FB20050D7E2 /* RestaurantsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2261D3111A832FB20050D7E2 /* RestaurantsViewController.swift */; };
 		2261D3141A832FC80050D7E2 /* AccomodationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2261D3131A832FC80050D7E2 /* AccomodationsViewController.swift */; };
 		2261D3161A832FDC0050D7E2 /* PackagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2261D3151A832FDC0050D7E2 /* PackagesViewController.swift */; };
+		228F19631A8DB52D004D5B50 /* Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228F19621A8DB52D004D5B50 /* Singleton.swift */; };
 		22D673E51A846286009C06FC /* WineriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D673E41A846286009C06FC /* WineriesViewController.swift */; };
 		22D673E91A85C7AE009C06FC /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D673E81A85C7AE009C06FC /* BasicCell.swift */; };
 		22D673EB1A871467009C06FC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D673EA1A871467009C06FC /* DetailViewController.swift */; };
@@ -51,6 +52,7 @@
 		2261D3111A832FB20050D7E2 /* RestaurantsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantsViewController.swift; sourceTree = "<group>"; };
 		2261D3131A832FC80050D7E2 /* AccomodationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccomodationsViewController.swift; sourceTree = "<group>"; };
 		2261D3151A832FDC0050D7E2 /* PackagesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PackagesViewController.swift; sourceTree = "<group>"; };
+		228F19621A8DB52D004D5B50 /* Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Singleton.swift; sourceTree = "<group>"; };
 		22D673E41A846286009C06FC /* WineriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WineriesViewController.swift; sourceTree = "<group>"; };
 		22D673E81A85C7AE009C06FC /* BasicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicCell.swift; sourceTree = "<group>"; };
 		22D673EA1A871467009C06FC /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			children = (
 				2261D2E61A8315B60050D7E2 /* AppDelegate.swift */,
 				2261D2EB1A8315B60050D7E2 /* ViewController.swift */,
+				228F19621A8DB52D004D5B50 /* Singleton.swift */,
 				2261D2ED1A8315B60050D7E2 /* Main.storyboard */,
 				2261D2F01A8315B60050D7E2 /* Images.xcassets */,
 				2261D2F21A8315B60050D7E2 /* LaunchScreen.xib */,
@@ -242,6 +245,7 @@
 				22D673EB1A871467009C06FC /* DetailViewController.swift in Sources */,
 				22D673E91A85C7AE009C06FC /* BasicCell.swift in Sources */,
 				2261D3121A832FB20050D7E2 /* RestaurantsViewController.swift in Sources */,
+				228F19631A8DB52D004D5B50 /* Singleton.swift in Sources */,
 				2261D3161A832FDC0050D7E2 /* PackagesViewController.swift in Sources */,
 				2261D2EC1A8315B60050D7E2 /* ViewController.swift in Sources */,
 				22D673E51A846286009C06FC /* WineriesViewController.swift in Sources */,
