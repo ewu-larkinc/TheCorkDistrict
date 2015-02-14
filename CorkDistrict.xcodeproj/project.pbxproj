@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2241B4411A8F482300944842 /* latahCreek.png in Resources */ = {isa = PBXBuildFile; fileRef = 2241B43F1A8F482300944842 /* latahCreek.png */; };
+		2241B4421A8F482300944842 /* patitCreek.png in Resources */ = {isa = PBXBuildFile; fileRef = 2241B4401A8F482300944842 /* patitCreek.png */; };
 		225D0F951A845F6C0054B12A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2261D2ED1A8315B60050D7E2 /* Main.storyboard */; };
 		2261D2E71A8315B60050D7E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2261D2E61A8315B60050D7E2 /* AppDelegate.swift */; };
 		2261D2EA1A8315B60050D7E2 /* CorkDistrict.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2261D2E81A8315B60050D7E2 /* CorkDistrict.xcdatamodeld */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2241B43F1A8F482300944842 /* latahCreek.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = latahCreek.png; path = ../latahCreek.png; sourceTree = "<group>"; };
+		2241B4401A8F482300944842 /* patitCreek.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = patitCreek.png; path = ../patitCreek.png; sourceTree = "<group>"; };
 		2261D2E11A8315B60050D7E2 /* CorkDistrict.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CorkDistrict.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2261D2E51A8315B60050D7E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2261D2E61A8315B60050D7E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 		2261D2E41A8315B60050D7E2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2241B43F1A8F482300944842 /* latahCreek.png */,
+				2241B4401A8F482300944842 /* patitCreek.png */,
 				2261D2E51A8315B60050D7E2 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -223,8 +229,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				225D0F951A845F6C0054B12A /* Main.storyboard in Resources */,
+				2241B4411A8F482300944842 /* latahCreek.png in Resources */,
 				2261D2F41A8315B60050D7E2 /* LaunchScreen.xib in Resources */,
 				2261D2F11A8315B60050D7E2 /* Images.xcassets in Resources */,
+				2241B4421A8F482300944842 /* patitCreek.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

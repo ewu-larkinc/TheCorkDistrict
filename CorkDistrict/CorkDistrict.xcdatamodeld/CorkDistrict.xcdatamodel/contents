@@ -23,12 +23,11 @@
         <attribute name="imageData" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
         <attribute name="phone" attributeType="String" syncable="YES"/>
-        <attribute name="state" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="zipcode" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
         <element name="Accommodation" positionX="-54" positionY="45" width="128" height="135"/>
         <element name="Restaurant" positionX="-63" positionY="18" width="128" height="133"/>
-        <element name="Winery" positionX="-63" positionY="-18" width="128" height="165"/>
+        <element name="Winery" positionX="-63" positionY="-18" width="128" height="150"/>
     </elements>
 </model>
