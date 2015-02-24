@@ -8,11 +8,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        self.tableView.backgroundView = UIImageView(image:UIImage(named: "menuBackground"))
+        
+        let dataManager = Singleton()
+        dataManager.loadData()
     }
 
     override func didReceiveMemoryWarning() {

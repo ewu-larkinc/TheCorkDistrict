@@ -28,12 +28,13 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         
         if (currentSelection != nil) {
-            //textView.text = currentSelection.valueForKey("about") as? String
             titleLabel.text = currentSelection.valueForKey("name") as? String
             addressLabel.text = currentSelection.valueForKey("address") as? String
-            zipLabel.text = currentSelection.valueForKey("zipcode") as? String
+            
             phoneLabel.text = currentSelection.valueForKey("phone") as? String
-            cityLabel.text = currentSelection.valueForKey("city") as? String
+            var cityText = currentSelection.valueForKey("city") as? String
+            var zipText = currentSelection.valueForKey("zipcode") as? String
+            cityLabel.text = cityText! + " " + zipText!
             cityLabel.sizeToFit()
             descriptionLabel.text = currentSelection.valueForKey("about") as? String
             descriptionLabel.sizeToFit()

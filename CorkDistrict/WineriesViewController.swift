@@ -23,6 +23,7 @@ class WineriesViewController: UIViewController, UITableViewDataSource, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wineBackground")!)
         let dataManager = Singleton()
         wineries = dataManager.getWineries()
     }
