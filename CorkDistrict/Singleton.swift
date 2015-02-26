@@ -9,26 +9,19 @@ import CoreData
 import UIKit
 import CoreLocation
 
+private let _SingletonSharedInstance = Singleton()
+
 class Singleton {
+    
+    class var sharedInstance: Singleton {
+        return _SingletonSharedInstance
+    }
     
     let locationManager = CLLocationManager()
     var wineries = [NSManagedObject]()
     var restaurants = [NSManagedObject]()
     var accommodations = [NSManagedObject]()
     let geocoder = CLGeocoder()
-    
-    class var sharedInstance: Singleton {
-        struct Static {
-            static var instance: Singleton?
-            static var token: dispatch_once_t = 0
-        }
-        
-        dispatch_once(&Static.token) {
-            Static.instance = Singleton()
-        }
-        
-        return Static.instance!
-    }
     
     /*
         This method is called only once, from the viewDidLoad method in ViewController.swift.

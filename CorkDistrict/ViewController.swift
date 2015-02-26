@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  CorkDistrict
 //
-//  Created by Chris Larkin on 2/4/15.
+//  Created by Chris Larkin on 2/1/15.
 //  Copyright (c) 2015 Chris Larkin. All rights reserved.
 //
 
@@ -10,12 +10,13 @@ import UIKit
 
 class ViewController: UITableViewController {
 
+    //# MARK: - View Controller Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.tableView.backgroundView = UIImageView(image:UIImage(named: "menuBackground"))
         
-        let dataManager = Singleton()
+        let dataManager = Singleton.sharedInstance
         dataManager.loadData()
     }
 

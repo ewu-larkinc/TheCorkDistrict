@@ -20,36 +20,26 @@ class WineriesViewController: UIViewController, UITableViewDataSource, UITableVi
         self.dismissViewControllerAnimated(true, completion: {})
     }
     
+    //# MARK: - View Controller Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wineBackground")!)
-        let dataManager = Singleton()
+        
+        let dataManager = Singleton.sharedInstance
         wineries = dataManager.getWineries()
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        //fetch objects from core data
-        let appDelegate = UIApplication.sharedApplication().delegate as AppDelegate
-        let managedContext = appDelegate.managedObjectContext!
-        let fetchRequest = NSFetchRequest(entityName:"Winery")
-    
-        var error: NSError?
-        let fetchedResults = managedContext.executeFetchRequest(fetchRequest, error: &error) as [NSManagedObject]?
         
-        if let results = fetchedResults {
-            wineries = results
-        } else {
-            println("Could not fetch \(error), \(error!.userInfo)")
-        }
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+    //# MARK: - Segue Methods
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         
         let dvc = segue.destinationViewController as DetailViewController
@@ -61,7 +51,7 @@ class WineriesViewController: UIViewController, UITableViewDataSource, UITableVi
         
     }
     
-    //TABLEVIEW METHODS//////////////
+    //# MARK: - TableView Methods
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return wineries.count
     }
