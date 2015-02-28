@@ -23,17 +23,13 @@ class WineriesViewController: UIViewController, UITableViewDataSource, UITableVi
     //# MARK: - View Controller Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-<<<<<<< Updated upstream
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wineBackground")!)
+
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wineBackground")!)
         
         let dataManager = Singleton.sharedInstance
-=======
-        
-        //
+
         self.tableView.backgroundView = UIImageView(image:UIImage(named: "wineBackground"))
-        
-        let dataManager = Singleton()
->>>>>>> Stashed changes
+
         wineries = dataManager.getWineries()
     }
     
