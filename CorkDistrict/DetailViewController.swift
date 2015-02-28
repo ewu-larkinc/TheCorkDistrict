@@ -22,6 +22,46 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     //# MARK: - View Controller Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+<<<<<<< Updated upstream
+=======
+        
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "detailBackground2")!)
+        self.changeColor()
+        
+        if (currentSelection != nil) {
+            titleLabel.text = currentSelection.valueForKey("name") as? String
+            addressLabel.text = currentSelection.valueForKey("address") as? String
+            
+            phoneLabel.text = currentSelection.valueForKey("phone") as? String
+            
+            var cityText = currentSelection.valueForKey("city") as? String
+            var zipText = currentSelection.valueForKey("zipcode") as? String
+            cityLabel.text = cityText! + " " + zipText!
+            cityLabel.sizeToFit()
+            
+            descriptionLabel.text = currentSelection.valueForKey("about") as? String
+            descriptionLabel.sizeToFit()
+            
+            
+            let imageData = currentSelection.valueForKey("imageData") as? NSData
+            let mainImage = UIImage(data: imageData!)
+            imageView.image = mainImage
+            imageView.layer.cornerRadius = 8.0
+            imageView.clipsToBounds = true
+            //imageView.contentMode = UIViewContentMode.ScaleAspectFit
+
+        }
+>>>>>>> Stashed changes
+    }
+    
+    
+    func changeColor() {
+        
+        titleLabel.textColor = UIColor.whiteColor()
+        addressLabel.textColor = UIColor.whiteColor()
+        phoneLabel.textColor = UIColor.whiteColor()
+        cityLabel.textColor = UIColor.whiteColor()
+        descriptionLabel.textColor = UIColor.whiteColor()
     }
     
     override func didReceiveMemoryWarning() {

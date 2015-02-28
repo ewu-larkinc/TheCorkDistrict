@@ -19,6 +19,8 @@ class WineToursViewController: UIViewController {
     //# MARK: - View Controller Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "restBackground")!)
+
     }
     
     override func didReceiveMemoryWarning() {
