@@ -9,17 +9,31 @@
 import Foundation
 import UIKit
 import MapKit
+import CoreData
 
 class MapViewController: UIViewController, MKMapViewDelegate {
     
+
     @IBAction func returnToHomePage(AnyObject) {
         self.dismissViewControllerAnimated(true, completion: {});
     }
     
+    let geocoder = CLGeocoder()
+    
+    var wineries = [NSManagedObject]()
+    var showWineries: Bool = false
     
     @IBOutlet var theMapView: MKMapView!
+    
+    @IBOutlet var wineButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //CoreData
+        let dataManager = Singleton.sharedInstance
+        wineries = dataManager.getWineries()
+        
         // Do any additional setup after loading the view, typically from a nib.
         var lat: CLLocationDegrees = 47.66
         var long: CLLocationDegrees = -117.415
@@ -34,6 +48,74 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         var theRegion: MKCoordinateRegion = MKCoordinateRegionMake(centerLocation, theSpan)
         
         self.theMapView.setRegion(theRegion, animated: true)
+        
+        placeWineries()
+        
+    }
+    @IBAction func filterWineries(AnyObject) {
+        if(showWineries){
+            placeWineries()
+            showWineries = false
+            wineButton.alpha = 1.0
+        }
+        else {
+            removeWineries()
+            showWineries = true
+            wineButton.alpha = 0.5
+        }
+    }
+    func removeWineries() {
+        theMapView.removeAnnotations(theMapView.annotations)
+    }
+    func placeWineries() {
+        
+        for var i = 0; i < wineries.count; i++
+        {
+            let temp = wineries[i]
+            //let placemark = temp.valueForKey("placemark") as CLPlacemark
+            //Can't recover placemark from coredata winery object
+            
+            let information = MKPointAnnotation()
+            
+            var address:String = temp.valueForKey("address") as String
+            var city:String = temp.valueForKey("city") as String
+            address = address + ", "
+            address = address + city
+            println("\(i) \(address)")
+            
+            geocoder.geocodeAddressString( address + ", WA, USA", {(placemarks: [AnyObject]!, error: NSError!) -> Void in
+                if let placemark = placemarks?[0]  as? CLPlacemark {
+                    information.coordinate = placemark.location.coordinate
+                }
+                
+            })
+            
+            information.title = temp.valueForKey("name") as? String
+            information.subtitle = address
+            
+            theMapView.addAnnotation(information)
+        }
+        
+    }
+    
+    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+        if !(annotation is MKPointAnnotation) {
+            return nil
+        }
+        
+        let reuseId = "test"
+        
+        var anView = mapView.dequeueReusableAnnotationViewWithIdentifier(reuseId)
+        if anView == nil {
+            anView = MKAnnotationView(annotation: annotation, reuseIdentifier: reuseId)
+            anView.image = UIImage(named:"Wine_Icon")
+            anView.canShowCallout = true
+        }
+        else {
+            anView.annotation = annotation
+        }
+        
+        return anView
     }
     
     override func didReceiveMemoryWarning() {

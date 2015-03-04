@@ -18,14 +18,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="UhO-Kf-fjK">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="UhO-Kf-fjK">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                                 <connections>
                                     <outlet property="delegate" destination="2ZD-wG-sk8" id="xk9-gS-HgE"/>
                                 </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="UhO-Kf-fjK" firstAttribute="leading" secondItem="ihZ-MV-rBX" secondAttribute="leading" id="Mng-2g-eXe"/>
+                            <constraint firstAttribute="trailing" secondItem="UhO-Kf-fjK" secondAttribute="trailing" id="R8E-QO-6fS"/>
+                            <constraint firstItem="v1x-e4-KaP" firstAttribute="top" secondItem="UhO-Kf-fjK" secondAttribute="bottom" id="aek-IF-Ztx"/>
+                            <constraint firstItem="UhO-Kf-fjK" firstAttribute="top" secondItem="X85-gW-TJL" secondAttribute="bottom" id="jBG-Kp-5Uk"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="theMapView" destination="UhO-Kf-fjK" id="swQ-Ki-4yG"/>
@@ -33,7 +39,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EjK-Ls-rK8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2926" y="135"/>
+            <point key="canvasLocation" x="2926" y="147"/>
         </scene>
         <!--Wineries-->
         <scene sceneID="DXy-ef-RSP">
