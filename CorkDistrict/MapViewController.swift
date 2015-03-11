@@ -18,7 +18,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         self.dismissViewControllerAnimated(true, completion: {});
     }
     
-    let geocoder = CLGeocoder()
+    //let geocoder = CLGeocoder()
     
     var wineries = [NSManagedObject]()
     var showWineries: Bool = false
@@ -68,13 +68,17 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         theMapView.removeAnnotations(theMapView.annotations)
     }
     func placeWineries() {
+
+        
         
         for var i = 0; i < wineries.count; i++
         {
-            let temp = wineries[i]
-            //let placemark = temp.valueForKey("placemark") as CLPlacemark
-            //Can't recover placemark from coredata winery object
             
+
+            
+            var geocoder = CLGeocoder() // moved this line of code inside the forloop to make a new geocoder every iteration through the loop. DUHHH
+
+            let temp = wineries[i]
             let information = MKPointAnnotation()
             
             var address:String = temp.valueForKey("address") as String
@@ -84,11 +88,14 @@ class MapViewController: UIViewController, MKMapViewDelegate {
             println("\(i) \(address)")
             
             geocoder.geocodeAddressString( address + ", WA, USA", {(placemarks: [AnyObject]!, error: NSError!) -> Void in
-                if let placemark = placemarks?[0]  as? CLPlacemark {
+                if let placemark = placemarks?[0]  as? CLPlacemark
+                {
                     information.coordinate = placemark.location.coordinate
+                    
+                    //information.coordinate = method that returns placemark.location.coordinate
                 }
                 
-            })
+                })
             
             information.title = temp.valueForKey("name") as? String
             information.subtitle = address
