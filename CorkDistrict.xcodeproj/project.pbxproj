@@ -27,7 +27,6 @@
 		22D673E91A85C7AE009C06FC /* BasicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D673E81A85C7AE009C06FC /* BasicCell.swift */; };
 		22D673EB1A871467009C06FC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22D673EA1A871467009C06FC /* DetailViewController.swift */; };
 		842EBC531AA183A00095BE97 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 842EBC521AA183A00095BE97 /* MapKit.framework */; };
-		C19BCC081AB03538005C847F /* GeoCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19BCC071AB03538005C847F /* GeoCoder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +64,6 @@
 		22D673E81A85C7AE009C06FC /* BasicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicCell.swift; sourceTree = "<group>"; };
 		22D673EA1A871467009C06FC /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		842EBC521AA183A00095BE97 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		C19BCC071AB03538005C847F /* GeoCoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoCoder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,7 +121,6 @@
 				22D673E41A846286009C06FC /* WineriesViewController.swift */,
 				22D673EA1A871467009C06FC /* DetailViewController.swift */,
 				2261D30B1A832F750050D7E2 /* MapViewController.swift */,
-				C19BCC071AB03538005C847F /* GeoCoder.swift */,
 				2261D3111A832FB20050D7E2 /* RestaurantsViewController.swift */,
 				2261D3131A832FC80050D7E2 /* AccomodationsViewController.swift */,
 				2261D3151A832FDC0050D7E2 /* PackagesViewController.swift */,
@@ -264,7 +261,6 @@
 				22D673EB1A871467009C06FC /* DetailViewController.swift in Sources */,
 				22D673E91A85C7AE009C06FC /* BasicCell.swift in Sources */,
 				2261D3121A832FB20050D7E2 /* RestaurantsViewController.swift in Sources */,
-				C19BCC081AB03538005C847F /* GeoCoder.swift in Sources */,
 				228F19631A8DB52D004D5B50 /* Singleton.swift in Sources */,
 				2261D3161A832FDC0050D7E2 /* PackagesViewController.swift in Sources */,
 				2261D2EC1A8315B60050D7E2 /* ViewController.swift in Sources */,
@@ -332,7 +328,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "-";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -374,7 +371,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "-";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;

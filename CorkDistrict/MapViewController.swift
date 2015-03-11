@@ -36,17 +36,17 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         // Do any additional setup after loading the view, typically from a nib.
         var lat: CLLocationDegrees = 47.66
-        var long: CLLocationDegrees = -117.415
+        var long: CLLocationDegrees = -117.2999
         
-        var latDelta: CLLocationDegrees = 0.04
-        var longDelta: CLLocationDegrees = 0.04
+        var latDelta: CLLocationDegrees = 0.5
+        var longDelta: CLLocationDegrees = 0.5
         
         var theSpan: MKCoordinateSpan = MKCoordinateSpanMake(latDelta, longDelta)
         
         var centerLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(lat, long)
         
         var theRegion: MKCoordinateRegion = MKCoordinateRegionMake(centerLocation, theSpan)
-        
+
         self.theMapView.setRegion(theRegion, animated: true)
         
         placeWineries()
@@ -105,7 +105,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
     }
     
-    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+   /* func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
         if !(annotation is MKPointAnnotation) {
             return nil
         }
@@ -123,7 +123,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         }
         
         return anView
-    }
+    }*/
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
