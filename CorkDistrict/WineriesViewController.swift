@@ -23,13 +23,9 @@ class WineriesViewController: UIViewController, UITableViewDataSource, UITableVi
     //# MARK: - View Controller Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wineBackground")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "wineBackground")!)
         
         let dataManager = Singleton.sharedInstance
-
-        self.tableView.backgroundView = UIImageView(image:UIImage(named: "wineBackground"))
-
         wineries = dataManager.getWineries()
     }
     
@@ -73,9 +69,6 @@ class WineriesViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func setContentForCell(cell:BasicCell, indexPath:NSIndexPath) {
         let winery = wineries[indexPath.row]
-        
-        cell.backgroundColor = UIColor.clearColor()
-        
         cell.titleLabel.text = winery.valueForKey("name") as? String
         cell.addressLabel.text = winery.valueForKey("address") as? String
         cell.cityLabel.text = winery.valueForKey("city") as? String
@@ -85,13 +78,7 @@ class WineriesViewController: UIViewController, UITableViewDataSource, UITableVi
         let imageData = winery.valueForKey("imageData") as? NSData
         let myImage = UIImage(data: imageData!)
         cell.cellImage.image = myImage
-        
-        //Round Image Corners ZB
-        cell.cellImage.layer.cornerRadius = 5.0
-        cell.cellImage.clipsToBounds = true
-        
         cell.cellImage.contentMode = UIViewContentMode.ScaleAspectFit
-        
     }
     
 }

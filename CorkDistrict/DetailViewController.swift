@@ -22,9 +22,7 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     //# MARK: - View Controller Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -40,13 +38,9 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        
-        tableView.backgroundView = UIImageView(image:UIImage(named: "detailBackground"))
-        
         let cell = tableView.dequeueReusableCellWithIdentifier("detailCell") as UITableViewCell
         cell.textLabel?.textAlignment = NSTextAlignment.Left
         cell.textLabel?.text = ""
-        cell.backgroundColor = UIColor.clearColor()
         
         switch (indexPath.row) {
             case 0:
@@ -72,10 +66,6 @@ class DetailViewController: UIViewController, UITableViewDataSource, UITableView
                 let mainImage = UIImage(data: imageData!)
                 let newImageView = UIImageView(frame: CGRectMake(15.0,10.0,345.0,200.0))
                 newImageView.image = mainImage
-                
-                newImageView.layer.cornerRadius = 5.0
-                newImageView.clipsToBounds = true
-                
                 cell.addSubview(newImageView)
                 break
             case 5:
